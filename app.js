@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const tasks = require("./routes/tasks");
+const users = require("./routes/users");
 
 // middleware
 
@@ -12,6 +13,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/tasks", tasks);
+
+app.use("/api/v1/user", users);
 
 const port = 3000;
 
